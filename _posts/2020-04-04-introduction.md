@@ -8,7 +8,7 @@ title: Introduction
 </head>
 
 <header>
-<img src="../../../../microtubule.png" alt="" width="1000"
+<img src="{{ site.baseurl }}/microtubule.png" alt="" width="1000"
          height="250">
 </header>
 # Microtubule Catastrophe
@@ -49,7 +49,7 @@ We visualized the times to catastrophe for both cases to see if there was a noti
 <center>{% include label_comparison_ecdf.html %}</center>
 <center>$$\cdot$$</center>
 <center><b>Fig. 1</b>: ECDF of times to catastrophe for labeled (True) vs. unlabeled (False) tubulin.<br>
-<b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part1.html"><code>tut1.html</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/bootstrapping.py"><code>bootstrapping.py</code></a>  </center>
+<b>example:</b> <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part1.html"><code>tut1.html</code></a> | <b>source code:</b> <a href="{{ site.baseurl }}/MCAT_pkg/MCAT_pkg/bootstrapping.py"><code>bootstrapping.py</code></a>  </center>
 <center>$$\cdot$$</center>
 
 Due to the strong overlap, it didn't seem as though there was a significant difference in catastrophe times when considering labeled tubulin as opposed to unlabeled tubulin, at least by eye. However, we also explored further by computing confidence intervals for the plug in estimate of the mean.
@@ -60,7 +60,7 @@ Due to the strong overlap, it didn't seem as though there was a significant diff
 <center>{% include label_comparison_intervals.html %}</center>
 <center>$$\cdot$$</center>
 <center><b>Fig. 2</b>: Confidence intervals for time to catastrophe derived from bootstrapping.<br>
-<b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part1.html"><code>tut1.html</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/bootstrapping.py"><code>bootstrapping.py</code></a>  </center>
+<b>example:</b> <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part1.html"><code>tut1.html</code></a> | <b>source code:</b> <a href="{{ site.baseurl }}/MCAT_pkg/MCAT_pkg/bootstrapping.py"><code>bootstrapping.py</code></a>  </center>
 <center>$$\cdot$$</center>
 
 There is also strong overlap in the confidence intervals, suggesting that the labeled and unlabeled tubulin have similar times to catastrophe. We also computed confidence intervals according to the DKW (Dvoretzky-Kiefer-Wolfowitz) inequality.
@@ -68,7 +68,7 @@ There is also strong overlap in the confidence intervals, suggesting that the la
 <center>{% include label_comparison_DKW.html %}</center>
 <center>$$\cdot$$</center>
 <center><b>Fig. 3</b>: Confidence intervals for time to catastrophe derived from DKW inequality.<br>
-<b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part1.html"><code>tut1.html</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/bootstrapping.py"><code>bootstrapping.py</code></a>  </center>
+<b>example:</b> <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part1.html"><code>tut1.html</code></a> | <b>source code:</b> <a href="{{ site.baseurl }}/MCAT_pkg/MCAT_pkg/bootstrapping.py"><code>bootstrapping.py</code></a>  </center>
 <center>$$\cdot$$</center>
 
 This inequality acts as a bound for the confidence interval. We saw that our bootstrapping confidence intervals lie well within these bounds.
@@ -89,7 +89,7 @@ The null hypothesis we are testing is as follows:
 We used bootstrapping to generate “trials” to compare to our test set, assuming that all sampled data sets come from the same generative distribution as the test set. By computing the test statistic for each of these and comparing it to the test statistic for our particular data set, we can obtain a p-value. The p-value represents the probability of getting a test statistic at least as extreme as the one in our sample when performing many trials or runs of the experiment. We obtained a p-value of 0.8, which means that the value of the KS test statistic for bootstrapped samples is as extreme as that for the actual experiment 80% of the time. This led us to conclude that we fail to reject the null hypothesis that there is no difference in the distribution of the two conditions.
 <br>
 
-<b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part1.html"><code>tut1.py</code></a>
+<b>example:</b> <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part1.html"><code>tut1.py</code></a>
 
 ---
 <br>
@@ -120,7 +120,7 @@ We find that the PDF simplifies to
 <center> $$f(t;\beta_1, \beta_2) = \frac{\beta_1 \beta_2}{\beta_2 - \beta_1} (e^{-\beta_1 t} - e^{-\beta_2 t})$$</center>
 <br>
 
-More detailed information about considerations we made when doing calculations for this model can be found in <a href="../../../../code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a>
+More detailed information about considerations we made when doing calculations for this model can be found in <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a>
 
 ### Maximum likelihood estimation
 
@@ -133,7 +133,7 @@ With the parameter estimates gained from maximum likelihood estimation, we can g
 <center>{% include MLE_comparison.html %}</center>
 <center>$$\cdot$$</center>
 <center><b>Fig. 4</b>: Experimental vs Theoretical ECDFs of Catastrophe Times. Experimental shown with interval; theoretical overlaid as line.<br>
-<b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/MLE_analysis.py"><code>MLE_analysis.py</code></a>  </center>
+<b>example:</b> <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="{{ site.baseurl }}/MCAT_pkg/MCAT_pkg/MLE_analysis.py"><code>MLE_analysis.py</code></a>  </center>
 <center>$$\cdot$$</center>
 
 At first glance, it seems as though the Gamma distribution model aligns better with our results. However, this can only tell us whether the model is reasonable, but does not necessarily give us enough information to determine which model is better.
@@ -149,7 +149,7 @@ We explored the question of which model was preferred by solely focusing on the 
 <center>{% include concentrations.html %}</center>
 <center>$$\cdot$$</center>
 <center><b>Fig. 5</b>: Times to catastrophe for various concentrations of tubulin. Presented as ECDF (left) and strip plot (right).<br>
-<b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/exploratory_analysis.py"><code>exploratory_analysis.py</code></a> </center>
+<b>example:</b> <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="{{ site.baseurl }}/MCAT_pkg/MCAT_pkg/exploratory_analysis.py"><code>exploratory_analysis.py</code></a> </center>
 <center>$$\cdot$$</center>
 
 Overall, each of the individual concentrations seem to behave very similarly, with the highest concentration having the longest time to catastrophe on average.
@@ -161,7 +161,7 @@ We used three different metrics to compare the two models. The first of these, t
 <center>{% include qq_plots.html %}</center>
 <center>$$\cdot$$</center>
 <center><b>Fig. 6</b>: Q-Q plot for each theoretical model.<br>
-<b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/model_assessment.py"><code>model_assessment.py</code></a> </center>
+<b>example:</b> <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="{{ site.baseurl }}/MCAT_pkg/MCAT_pkg/model_assessment.py"><code>model_assessment.py</code></a> </center>
 <center>$$\cdot$$</center>
 
 We also generated predictive ECDF plots for each model. Predictive ECDFs overlay the results of the experimental ECDF with the results we would get using each of our models. The two curves should be aligned very closely if the model fits the data.
@@ -170,7 +170,7 @@ We also generated predictive ECDF plots for each model. Predictive ECDFs overlay
 <center>{% include pred_ecdf.html %}</center>
 <center>$$\cdot$$</center>
 <center><b>Fig. 7</b>: Predictive ECDFs for each theoretical model.<br>
-<b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/model_assessment.py"><code>model_assessment.py</code></a> </center>
+<b>example:</b> <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="{{ site.baseurl }}/MCAT_pkg/MCAT_pkg/model_assessment.py"><code>model_assessment.py</code></a> </center>
 <center>$$\cdot$$</center>
 
 Here, we see that the Gamma distribution is a much better fit for the experimental results.
@@ -183,7 +183,7 @@ for a set of parameters $$\theta$$ with MLE $$\theta^*$$ and a model with log-li
 
 For the exponential distribution, we found that AIC = 9327.39, and for the gamma distribution, AIC = 9278.35.
 
-<b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a>
+<b>example:</b> <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a>
 
 ---
 <br>
@@ -205,13 +205,13 @@ $$\cdot \cdot \cdot$$
 
 - A walkthrough of the analysis shown above is available in two parts in the following Jupyter notebooks, along with tips and examples for using the package created for the analysis pipeline.
 <br>
-<a href="../../../../code/MCAT_Tutorial_Part1.html"><code>MCAT_Tutorial_Part1.html</code></a> | <a href="../../../../code/MCAT_Tutorial_Part1.ipynb"><code>MCAT_Tutorial_Part1.ipynb</code></a> (Experimental Dynamics)
+<a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part1.html"><code>MCAT_Tutorial_Part1.html</code></a> | <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part1.ipynb"><code>MCAT_Tutorial_Part1.ipynb</code></a> (Experimental Dynamics)
 <br>
-<a href="../../../../code/MCAT_Tutorial_Part2.html"><code>MCAT_Tutorial_Part2.html</code></a> | <a href="../../../../code/MCAT_Tutorial_Part2.ipynb"><code>MCAT_Tutorial_Part2.ipynb</code></a> (Modeling Catastrophe)
+<a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part2.html"><code>MCAT_Tutorial_Part2.html</code></a> | <a href="{{ site.baseurl }}/code/MCAT_Tutorial_Part2.ipynb"><code>MCAT_Tutorial_Part2.ipynb</code></a> (Modeling Catastrophe)
 
 - The analysis package can be downloaded here:
 <br>
-<a href="../../../../MCAT_pkg"><code>MCAT_pkg</code></a>
+<a href="{{ site.baseurl }}/MCAT_pkg"><code>MCAT_pkg</code></a>
 
 - The original paper can be found here:
 <br>
