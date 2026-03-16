@@ -12,7 +12,7 @@ title: Introduction
          height="250">
 </header>
 # Microtubule Catastrophe
-#### Rashi Jeeda, Joeyta Banerjee, Mei Yi You | BE/Bi103a Fall 2020 | <a href="https://github.com/rjeeda/rjeeda.github.io">View on GitHub</a>
+#### Rashi Jeeda, Joeyta Banerjee, Mei Yi You | BE/Bi103a Fall 2020 | <a href="https://github.com/rjeeda/microtubule-catastrophe">View on GitHub</a>
 
 $$\cdot \cdot \cdot$$
 
