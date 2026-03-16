@@ -1,9 +1,10 @@
 # Setup
 title: Microtubule Catastrophe
 tagline: BEBi103a | Fall 2020
-url: https://getpoole.com
+# url: https://getpoole.com
+url: "https://rjeeda.github.io"
 paginate: 1
-baseurl: ""
+baseurl: "/microtubule-catastrophe"
 permalink: pretty
 
 # Gems
